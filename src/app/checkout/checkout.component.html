@@ -1,0 +1,39 @@
+<ama-top-bar></ama-top-bar>
+<ama-slide-menu-content [@openMenu]="this.slideMenuTriger.trigerSlideMenu.openMenu"></ama-slide-menu-content>
+<div class="checkout">
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonServices/Site/US/Product/FBA/Outlet/Merchandising/AMZN_OutletDeals_Template_March_1500x200_wh_EN.jpg"
+    alt="" class="checkout__img">
+
+  <div class="checkout__items" >
+     <span class="subtotal">Subtotal ({{basket.productsBasket.length}} item): <strong> {{sumaFromBasket | currency }} </strong> </span>
+    <div class="group__checkbox">
+      <input type="checkbox"> <label for="">This order contains a gift</label>
+    </div>
+
+     <button class="proceed__to__checkout">Proceed to checkout</button>
+  </div>
+
+  <div class="checkout__product__list">
+    <div class="checkout__heading">
+      <h2  *ngIf="basket.productsBasket.length == 0">Your cart is empty!</h2>
+      <h2 *ngIf="basket.productsBasket.length > 0">You have in your cart <strong>{{basket.productsBasket.length}} item! </strong>
+      </h2>
+
+    </div>
+    
+    <div class="products" *ngFor="let product of basket.productsBasket">
+      <img [src]="product.imageUrl" alt="" class="checkout__image">
+      <div class="checkout__info">
+        <h4 class="checkout__title">{{product.title}}</h4>
+        <strong class="checkout__price">{{ product.price | currency }}</strong>
+        <button (click)="removeFromBasket(product)" class="remove__from__cart__button">Remove from cart</button>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+</div>

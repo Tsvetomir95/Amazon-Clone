@@ -1,0 +1,177 @@
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  // max-width: 100%;
+  height: 60px;
+  background-color: #131921;
+  font-family: 'Montserrat', sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 900;
+}
+
+
+.topbar__logo {
+  width: 100px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.fa-bars {
+  color: #fff;
+  cursor: pointer;
+  font-size: 26px;
+  margin: 0 5px;
+}
+
+.menu {
+  border: 1px solid gray;
+  padding: 8px 5px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius:2px;
+  -moz-border-radius:2px;
+  -ms-border-radius:2px;
+  -o-border-radius:2px;
+  width: fit-content;
+}
+
+
+.menu:hover {
+  border: 1px solid white;
+}
+
+.search__bar {
+  display: flex;
+  width: 100%;
+  // flex: 2;
+  height: 38px;
+  // border-radius: 4px;
+  border: 0;
+  outline: none;
+  padding: 0 10px;
+}
+
+.input-group {
+  display: flex;
+  flex: 1;
+  margin-left: 100px;
+
+}
+
+
+.fa-search {
+  cursor: pointer;
+  background-color: #F3A847;
+  padding: 12px 15px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  font-size: 14px;
+  width: fit-content;
+}
+
+// .search__icon {
+//   // padding: 100%;
+//   background-color: #F3A847;
+//   padding: 10px;
+// }
+.users {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 6px 10px;
+  margin-left: 30px;
+  width: fit-content;
+}
+
+.users:hover {
+  border: 1px solid white;
+}
+
+.return {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 6px 10px;
+  margin-left: 30px;
+  width: fit-content;
+}
+
+.return:hover {
+  border: 1px solid white;
+}
+
+.shopping__cart {
+  display: flex;
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  // position: relative;
+  margin-left: 30px;
+  width: fit-content;
+}
+
+.fa-shopping-cart {
+  font-size: 30px;
+
+}
+
+.shopping__number {
+  margin: 0 5px;
+  color: orange;
+}
+
+.shopping__cart__text {
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.text__links {
+  font-size: 11px ;
+  font-weight: 400;
+}
+
+.account__lists {
+  font-size: 13px ;
+  font-weight: 700;
+}
+
+.sign__in__button {
+  cursor: pointer
+}
+
+.log__out__button {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 740px) {
+  .shopping__cart {
+    display: none;
+  }
+
+  .return {
+    display: none;
+  }
+
+  .users {
+    display: none;
+  }
+
+  .topbar__logo {
+    width: 100px;
+    cursor: pointer;
+
+  }
+  .input-group {
+  display: flex;
+  flex: 1;
+  margin: 0 !important;
+
+}
+
+}

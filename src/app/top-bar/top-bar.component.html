@@ -1,0 +1,39 @@
+<div class="flex-container">
+
+  <!-- Menu -->
+  <span class="menu" (click)="openMenuButton()">
+    <i class="fa fa-bars"></i>
+  </span>
+  <!-- Logo -->
+  <img routerLink="" class="topbar__logo" src="../../assets/amazon_PNG25.png" />
+
+  <!-- Sarch Bar -->
+
+    <div class="input-group">
+      <input class="search__bar" type="text">
+      <span class="search__icon"><i class="fa fa-search"></i></span>
+    </div>
+
+    <div class="users">
+    <span class="text__links">Hello, <span *ngIf="userEmail">{{userEmail}}</span> <span *ngIf="!userEmail ">User</span>  </span>
+    <div class="account__lists">
+      <span class="sign__in__button" [routerLink]="['/login']" *ngIf="!userEmail"> Sign In </span>
+      <span class="log__out__button" *ngIf="userEmail" (click)="onLogOut()" > Log Out </span>
+    </div>
+  </div>
+  <div class="return">
+    <span class="text__links">Returns </span>
+    <div class="account__lists">
+      & Orders
+    </div>
+  </div>
+
+
+  <div class="shopping__cart" [routerLink]="['checkout']" >
+    <i class="fa fa-shopping-cart"  aria-hidden="true"></i>
+    <span class="shopping__number">{{basket.productsBasket.length}}</span>
+    <span class="shopping__cart__text">Cart</span>
+  </div>
+
+
+</div>

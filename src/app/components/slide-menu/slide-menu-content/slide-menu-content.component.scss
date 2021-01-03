@@ -1,0 +1,65 @@
+.slide__menu__content {
+  display: inline-block;
+  width: 250px;
+  margin-left: 30px;
+  margin-right: auto;
+  // align-items: center;
+  align-content: flex-start;
+  // text-align: center;
+  color: white;
+}
+
+.users {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.text__links {
+  font-size: 11px;
+}
+
+.account__lists {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.return {
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.shopping__number {
+  color: orangered;
+}
+
+.fa-shopping-cart {
+  width: 1rem;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.shopping__cart__text {
+  margin-left: 10px;
+  font-weight: 700;
+}
+.shopping__cart {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.sign__in__button {
+  cursor: pointer
+}
+
+.log__out__button {
+  cursor: pointer;
+}
+
+.user__email {
+  display: flex;
+  flex: 1;
+  margin-bottom: 10px;
+  // width: 300px
+}

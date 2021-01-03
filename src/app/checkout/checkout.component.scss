@@ -1,0 +1,151 @@
+.checkout__img {
+  width: 70%;
+  object-fit: cover;
+  height: 150px;
+  margin: 10px;
+}
+
+.checkout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+}
+
+.checkout__product__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.checkout__image {
+  width: 200px;
+  object-fit: contain;
+  margin-right: 20px;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 20px;
+  // box-shadow: 20px 0 5px black;
+}
+
+.checkout__heading {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.checkout__heading>h2 {
+  border-bottom: 2px solid orange;
+}
+
+.heading {
+  font-size: 24px;
+}
+
+.checkout__title {
+  display: flex;
+  max-width: 50%;
+}
+
+.checkout__price {
+  display: block;
+  margin: 20px 0;
+}
+
+.checkout__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkout__items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: sticky;
+  top: 75px;
+  flex-direction: column;
+  border: 1px solid #F3F3F3;
+  margin: 10px;
+  width: 20vw;
+  height: 26vh;
+  background-color: #F3F3F3;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  padding: 10px;
+}
+
+.proceed__to__checkout {
+  margin: 10px 20px;
+  background-color: #F0c14b;
+  border: 1px solid;
+  padding: 10px 10px;
+  border-color: #a88734 #9c7e31 #846a29;
+  flex: 1;
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+
+.subtotal {
+  margin: 10px 0;
+  font-weight: 500;
+}
+
+.group__checkbox>input {
+  margin-right: 5px;
+}
+
+.group__checkbox {
+  margin: 20px 0;
+}
+
+.remove__from__cart__button {
+  max-width: 10rem;
+  background-color: #F0c14b;
+  border: 1px solid;
+  border-color: #a88734 #9c7e31 #846a29;
+}
+
+@media only screen and (max-width: 740px) {
+  .checkout__img {
+    display: none;
+  }
+
+  .checkout__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative ;
+    top: 0px;
+    flex-direction: column;
+    border: 1px solid #F3F3F3;
+    margin: 10px;
+    width: 100%;
+    height: 26vh;
+    background-color: #F3F3F3;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    padding: 10px;
+}
+
+  .proceed__to__checkout {
+    
+  }
+}

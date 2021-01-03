@@ -1,0 +1,22 @@
+<ama-top-bar></ama-top-bar>
+
+<div  class="showMenu">
+  <ama-slide-menu-content [@openMenu]="this.slideMenuTriger.trigerSlideMenu.openMenu"></ama-slide-menu-content>
+</div>
+
+<div class="home__banner">
+  <i (click)="changeImage()" class="fa fa-arrow-right"></i>
+  <img class="home__image" [src]="sliderImages[i]" alt="">
+  <i (click)="changeImage()" class="fa fa-arrow-left"></i>
+</div>
+
+<div class="home__container">
+
+
+    <ama-product class="product" >
+    </ama-product>
+
+
+
+</div>
+<ama-footer></ama-footer>
