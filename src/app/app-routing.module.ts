@@ -8,12 +8,14 @@ import { AuthService } from "./services/auth.service";
 import { BasketService } from "./services/basket.service";
 import { ProductService } from "./services/product.service";
 import { SlideMenuTrigerService } from "./services/slide-menu-triger.service";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 
 const routes: Routes = [
   { path: "", component: HomeComponent, canActivate: [AuthGuard] },
   { path: "login", component: LoginComponent },
   { path: "checkout", component: CheckoutComponent, canActivate: [AuthGuard] },
   { path: "*", component: HomeComponent, canActivate: [AuthGuard] },
+  { path: "**", component: PageNotFoundComponent, pathMatch: 'full'},
 ];
 
 @NgModule({

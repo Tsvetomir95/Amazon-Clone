@@ -1,8 +1,10 @@
 <div class="slide__menu__content">
 
   <div class="users">
+    
    <i class="fa fa-user"></i> <span class="text__links"> Hello, <span class="user__email" *ngIf="userEmail">{{userEmail}}</span> <span *ngIf="!userEmail">User</span> </span>
-    <div class="account__lists">
+  
+   <div class="account__lists">
       <span class="sign__in__button" [routerLink]="['/login']" *ngIf="!userEmail"> Sign In </span>
       <span class="log__out__button" *ngIf="userEmail" (click)="onLogOut()" > Log Out </span>
     </div>
@@ -15,7 +17,7 @@
   </div>
 
 
-  <div class="shopping__cart" routerLink="checkout" >
+  <div class="shopping__cart" [routerLink]="['/checkout']" >
     <i class="fa fa-shopping-cart"  aria-hidden="true"></i>
     <span class="shopping__number">{{basket.productsBasket.length}}</span>
     <span class="shopping__cart__text">Cart</span>

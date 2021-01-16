@@ -4,6 +4,7 @@ import { TopBarComponent } from './top-bar.component';
 import {RouterModule} from '@angular/router';
 import { SlideMenuTrigerService } from '../services/slide-menu-triger.service';
 import { AuthService} from '../services/auth.service'
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -12,7 +13,8 @@ import { AuthService} from '../services/auth.service'
   declarations: [TopBarComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [TopBarComponent],
   providers: [SlideMenuTrigerService, AuthService]

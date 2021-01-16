@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { SlideMenuTrigerService} from '../services/slide-menu-triger.service';
 import {BasketService} from '../services/basket.service';
 import {AuthService} from '../services/auth.service';
@@ -13,8 +13,9 @@ import {AngularFireAuth} from 'angularfire2/auth';
 })
 export class TopBarComponent implements OnInit {
   userEmail: any;
-  // shoppingCart = 0;
-
+  query: string;
+  @Output() sendQuery = new EventEmitter<string>();
+  @Output() openSlideMenu = new EventEmitter<string>();
   constructor(
   public slideMenuTriger: SlideMenuTrigerService,
   public basket: BasketService,
@@ -38,13 +39,17 @@ export class TopBarComponent implements OnInit {
     
   }
 
-  openMenuButton() {
-    this.slideMenuTriger.trigerSlideMenu.openMenu = !this.slideMenuTriger.trigerSlideMenu.openMenu;
+  openMenu() {
+   this.openSlideMenu.emit('open');
     
   }
 
   onLogOut() {
     this.authService.logOut();
+  }
+
+  search(query: string) {
+    this.sendQuery.emit(query)
   }
 
 }

@@ -1,5 +1,6 @@
 .slide__menu__content {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 250px;
   margin-left: 30px;
   margin-right: auto;
@@ -50,7 +51,7 @@
 }
 
 .sign__in__button {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .log__out__button {
@@ -58,6 +59,7 @@
 }
 
 .user__email {
+  position: relative;
   display: flex;
   flex: 1;
   margin-bottom: 10px;

@@ -18,7 +18,7 @@
   flex-direction: column;
   max-width: 340px;
   height: fit-content;
-  border: 1px solid #DDDDDD;
+  border: 1px solid #dddddd;
   padding: 20px 26px;
   border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -38,7 +38,7 @@
 .sign__in__button {
   margin: 10px 10px;
   padding: 3px 5px;
-  background-color: #F0c14b;
+  background-color: #f0c14b;
   border: 1px solid;
   border-color: #a88734 #9c7e31 #846a29;
 }
@@ -63,15 +63,14 @@
 .sign__in__container > h2 {
   margin: 10px 0;
 }
-.sign__in__container > label{
+.sign__in__container > label {
   padding: 3px 5px;
 }
 
 @media only screen and (max-width: 740px) {
- 
-.text {
-  display: none;
-}
+  .text {
+    display: none;
+  }
 }
 
 .alert-success {
@@ -80,4 +79,16 @@
   font-weight: 700;
   padding: 20px 30px;
   margin: 20px;
+}
+
+// Modal
+
+.show__modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 10000;
+  height: 100vh;
+  width: 100vw;
 }

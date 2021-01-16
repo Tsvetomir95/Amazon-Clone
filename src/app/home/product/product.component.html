@@ -1,43 +1,6 @@
-  <div class="product__row">
-  <ng-container  *ngFor="let product of products.product | slice:0:2">
-
-    <div class="products__array">
-
-    <div class="product__title">
-      <h4 class="product__title__heading">{{product.title}}</h4>
-   </div>
-    <img class="product__image" [src]="product.imageUrl" alt="">
-    <strong class="product__price">{{product.price | currency}}</strong>
-    <button (click)="addToBasket(product)" class="button__addtocart"> <i [ngClass]="product.isAddToCart ? 'fa-check' : 'fa-shopping-bag' " class="fa"></i> Add to Cart</button>
-  </div>
-  </ng-container>
+  <div [id]="id" class="product">
+      <h4 class="product__title__heading">{{title}}</h4>
+    <img class="product__image" [src]="productImageUrl" alt="">
+    <strong class="product__price">{{productPrice | currency}}</strong>
+    <button  (click)="addToBasket()" class="button__addtocart"> <i class="fa" [ngClass]=" changeIcon ?  'fa-check' :'fa-shopping-basket' " aria-hidden="true"></i> Add to cart</button>
 </div>
-  <div class="product__row__two">
-  <ng-container  *ngFor="let product of products.product | slice:2:5">
-
-    <div class="products__array">
-
-    <div class="product__title">
-      <h4 class="product__title__heading">{{product.title}}</h4>
-   </div>
-    <img class="product__image" [src]="product.imageUrl" alt="">
-    <strong class="product__price">{{product.price | currency}}</strong>
-    <button (click)="addToBasket(product)" class="button__addtocart"> <i [ngClass]="product.isAddToCart ? 'fa-check' : 'fa-shopping-bag'" class="fa"></i> Add to Cart</button>
-  </div>
-  </ng-container>
-</div>
-  <div class="product__row__three">
-  <ng-container  *ngFor="let product of products.product | slice:5:6">
-
-    <div class="products__array">
-
-    <div class="product__title">
-      <h4 class="product__title__heading">{{product.title}}</h4>
-   </div>
-    <img class="product__image" [src]="product.imageUrl" alt="">
-    <strong class="product__price">{{product.price | currency}}</strong>
-    <button (click)="addToBasket(product)" class="button__addtocart"> <i [ngClass]="product.isAddToCart ? 'fa-check' : 'fa-shopping-bag' " class="fa"></i> Add to Cart</button>
-  </div>
-  </ng-container>
-</div>
-

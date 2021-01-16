@@ -2,33 +2,51 @@ import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../services/auth.service";
 import { Router } from "@angular/router";
 import { FlashMessagesService } from "angular2-flash-messages";
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from "@angular/forms";
+import { modalAnimation } from "../animations/animations";
 
 @Component({
   selector: "ama-login",
   templateUrl: "./login.component.html",
   styleUrls: ["./login.component.scss"],
+  animations: [modalAnimation]
 })
 export class LoginComponent implements OnInit {
-  email: string;
-  password: string;
-
+  showModal = false;
+  loginForm: FormGroup;
   constructor(
     private auth: AuthService,
     private router: Router,
-    public flashMessage: FlashMessagesService
+    private formBuilder: FormBuilder
   ) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loginForm = this.formBuilder.group({
+      email: ["markovtsvetomir95@gmail.com", Validators.required],
+      password: ["123456789", Validators.required],
+    });
+  }
 
-  onSubmit() {
+  onSignIn() {
+    let email = this.loginForm.value.email;
+    let password = this.loginForm.value.password;
+
     this.auth
-      .login(this.email, this.password)
+      .login(email, password)
       .then((res) => {
-        
-        
-        
-          this.router.navigate([""]);
-        
+        if (res) {
+          this.showModal = true;
+          setTimeout(()=> {
+            this.showModal = false;
+            this.router.navigate([""]);
+          }, 3000)
+        }
+        // 
       })
       .catch((err) => {
         console.log(err);
@@ -37,7 +55,7 @@ export class LoginComponent implements OnInit {
 
   onCreateAccount() {
     this.auth
-      .createAccount(this.email, this.password)
+      .createAccount(this.loginForm.value.email, this.loginForm.value.password)
       .then((res) => {
         console.log("You are created new account");
         this.router.navigate([""]);
@@ -45,5 +63,12 @@ export class LoginComponent implements OnInit {
       .catch((err) => {
         console.log(err);
       });
+  }
+
+  closeModal() {
+    this.showModal = false;
+    setTimeout(() => {
+      this.router.navigate([""]);
+    },1000)
   }
 }

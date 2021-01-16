@@ -1,7 +1,7 @@
 <div class="flex-container">
 
   <!-- Menu -->
-  <span class="menu" (click)="openMenuButton()">
+  <span class="menu" (click)="openMenu()">
     <i class="fa fa-bars"></i>
   </span>
   <!-- Logo -->
@@ -10,8 +10,8 @@
   <!-- Sarch Bar -->
 
     <div class="input-group">
-      <input class="search__bar" type="text">
-      <span class="search__icon"><i class="fa fa-search"></i></span>
+      <input [(ngModel)]="query" name="query" class="search__bar" type="text">
+      <span (click)="search(query)" class="search__icon"><i class="fa fa-search"></i></span>
     </div>
 
     <div class="users">

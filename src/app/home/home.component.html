@@ -1,22 +1,48 @@
-<ama-top-bar></ama-top-bar>
+<ng-container *ngIf="!loadingPage">
+  <div class="container">
+    <mat-spinner></mat-spinner>
+  </div>
+</ng-container>
 
-<div  class="showMenu">
-  <ama-slide-menu-content [@openMenu]="this.slideMenuTriger.trigerSlideMenu.openMenu"></ama-slide-menu-content>
-</div>
+<ng-container *ngIf="loadingPage">
+  <ama-top-bar
+    (openSlideMenu)="openSlideMenu($event)"
+    (sendQuery)="onSearch($event)"
+  ></ama-top-bar>
 
-<div class="home__banner">
-  <i (click)="changeImage()" class="fa fa-arrow-right"></i>
-  <img class="home__image" [src]="sliderImages[i]" alt="">
-  <i (click)="changeImage()" class="fa fa-arrow-left"></i>
-</div>
+  <div class="showMenu">
+    <ama-slide-menu-content [@openMenu]="openMenu"></ama-slide-menu-content>
+  </div>
 
-<div class="home__container">
+  <div class="home__banner">
+    <i (click)="changeImage()" class="fa fa-arrow-right"></i>
+    <img class="home__image" [src]="sliderImages[i]" alt="" />
+    <i (click)="changeImage()" class="fa fa-arrow-left"></i>
+  </div>
 
-
-    <ama-product class="product" >
+  <div class="home__container">
+    <mat-progress-spinner
+      *ngIf="!allProducts"
+      color="warn"
+      mode="indeterminate"
+    ></mat-progress-spinner>
+    <ama-product
+      *ngFor="let product of filteredProducts"
+      [id]="product.id"
+      [title]="product.title"
+      [productImageUrl]="product.image"
+      [productPrice]="product.price"
+      (product)="handleAddToCard(product)"
+    >
     </ama-product>
+  </div>
 
-
-
-</div>
-<ama-footer></ama-footer>
+  <mat-paginator
+    [length]="filteredProducts.length"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    (page)="handlePage($event)"
+  >
+  </mat-paginator>
+  <ama-footer></ama-footer>
+</ng-container>

@@ -6,12 +6,11 @@
   // max-width: 100%;
   height: 60px;
   background-color: #131921;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   position: sticky;
   top: 0;
   z-index: 900;
 }
-
 
 .topbar__logo {
   width: 100px;
@@ -32,13 +31,12 @@
   margin-left: 10px;
   cursor: pointer;
   border-radius: 2px;
-  -webkit-border-radius:2px;
-  -moz-border-radius:2px;
-  -ms-border-radius:2px;
-  -o-border-radius:2px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
   width: fit-content;
 }
-
 
 .menu:hover {
   border: 1px solid white;
@@ -59,13 +57,11 @@
   display: flex;
   flex: 1;
   margin-left: 100px;
-
 }
-
 
 .fa-search {
   cursor: pointer;
-  background-color: #F3A847;
+  background-color: #f3a847;
   padding: 12px 15px;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
@@ -117,7 +113,6 @@
 
 .fa-shopping-cart {
   font-size: 30px;
-
 }
 
 .shopping__number {
@@ -132,21 +127,27 @@
 }
 
 .text__links {
-  font-size: 11px ;
+  font-size: 11px;
   font-weight: 400;
 }
 
 .account__lists {
-  font-size: 13px ;
+  font-size: 13px;
   font-weight: 700;
 }
 
 .sign__in__button {
-  cursor: pointer
+  cursor: pointer;
 }
 
 .log__out__button {
   cursor: pointer;
+}
+
+@media only screen and (max-width: 831px) {
+  .shopping__cart {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 740px) {
@@ -165,13 +166,10 @@
   .topbar__logo {
     width: 100px;
     cursor: pointer;
-
   }
   .input-group {
-  display: flex;
-  flex: 1;
-  margin: 0 !important;
-
-}
-
+    display: flex;
+    flex: 1;
+    margin: 0 !important;
+  }
 }

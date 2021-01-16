@@ -23,7 +23,7 @@
     </div>
     
     <div class="products" *ngFor="let product of basket.productsBasket">
-      <img [src]="product.imageUrl" alt="" class="checkout__image">
+      <img [src]="product.image" alt="" class="checkout__image">
       <div class="checkout__info">
         <h4 class="checkout__title">{{product.title}}</h4>
         <strong class="checkout__price">{{ product.price | currency }}</strong>
