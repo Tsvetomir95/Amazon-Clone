@@ -12,8 +12,8 @@ import { ProductService } from '../services/product.service';
 })
 export class CheckoutComponent implements OnInit {
   sumaFromBasket = 0;
-
-  constructor(public slideMenuTriger: SlideMenuTrigerService, public basket: BasketService,
+  openMenu = false;
+  constructor(public basket: BasketService,
     public product: ProductService) { }
 
   ngOnInit() {
@@ -31,5 +31,8 @@ export class CheckoutComponent implements OnInit {
     this.sumaFromBasket -= product.price;
   }
 
+  openSlideMenu() {
+    this.openMenu = !this.openMenu;    
+  }
 
 }

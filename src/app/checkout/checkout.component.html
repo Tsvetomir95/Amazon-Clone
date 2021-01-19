@@ -1,5 +1,5 @@
-<ama-top-bar></ama-top-bar>
-<ama-slide-menu-content [@openMenu]="this.slideMenuTriger.trigerSlideMenu.openMenu"></ama-slide-menu-content>
+<ama-top-bar (openSlideMenu)="openSlideMenu()"></ama-top-bar>
+<ama-slide-menu-content [@openMenu]="openMenu"></ama-slide-menu-content>
 <div class="checkout">
   <img
     src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonServices/Site/US/Product/FBA/Outlet/Merchandising/AMZN_OutletDeals_Template_March_1500x200_wh_EN.jpg"

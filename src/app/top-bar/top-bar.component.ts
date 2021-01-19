@@ -40,7 +40,7 @@ export class TopBarComponent implements OnInit {
   }
 
   openMenu() {
-   this.openSlideMenu.emit('open');
+   this.openSlideMenu.emit();
     
   }
 

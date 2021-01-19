@@ -61,8 +61,7 @@ handleAddToCard(product) {
     console.log(event);
   }
 
-  openSlideMenu(event: string) {
-    console.log(event);
+  openSlideMenu() {
     this.openMenu = !this.openMenu;
   }
 
